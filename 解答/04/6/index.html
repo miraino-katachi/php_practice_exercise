@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習問題04-6</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="./action.php" method="post">
+                            <div class="form-group">
+                                <label for="menu">メニューを選択してください</label>
+                                <select multiple name="menu[]" class="form-control" id="menu" size="12">
+                                    <option value="Aランチ">Aランチ</option>
+                                    <option value="Bランチ">Bランチ</option>
+                                    <option value="Cランチ">Cランチ</option>
+                                    <option value="唐揚げ定食">唐揚げ定食</option>
+                                    <option value="とんかつ定食">とんかつ定食</option>
+                                    <option value="エビフライ定食">エビフライ定食</option>
+                                    <option value="オムライス">オムライス</option>
+                                    <option value="カレーライス">カレーライス</option>
+                                    <option value="ごはん大">ごはん大</option>
+                                    <option value="ごはん小">ごはん小</option>
+                                    <option value="ビール">ビール</option>
+                                    <option value="烏龍茶">烏龍茶</option>
+                                </select>
+                            </div>
+                            <input type="submit" value="送信" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

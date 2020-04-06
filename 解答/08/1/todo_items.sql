@@ -1,0 +1,6 @@
+CREATE TABLE `todo_items` (
+  `id` INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `expiration_date` DATE NOT NULL,
+  `todo_item` VARCHAR(50) NOT NULL,
+  `is_completed` TINYINT(4) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
