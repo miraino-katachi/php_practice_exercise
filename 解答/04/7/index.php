@@ -3,7 +3,7 @@ $poroduct = [
     'product_name' => 'みかん',
     'production_area' => '愛媛県',
     'quality' => '優',
-    'price' => '3000',
+    'price' => 3000,
 ];
 ?>
 <!DOCTYPE html>
