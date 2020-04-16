@@ -26,7 +26,7 @@ class Base
     public function __construct()
     {
         // データベースに接続するための文字列（DSN 接続文字列）
-        $dsn = 'mysql:dbname='.self::DB_NAME.';host='.self::DB_HOST.';charset=utf8';
+        $dsn = 'mysql:dbname=' . self::DB_NAME . ';host=' . self::DB_HOST . ';charset=utf8';
 
         // PDOクラスのインスタンス
         $this->dbh = new PDO($dsn, self::DB_USER, self::DB_PASS);
