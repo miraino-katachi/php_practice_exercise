@@ -7,7 +7,7 @@ session_regenerate_id();
 require_once('./class/db/Base.php');
 require_once('./class/db/Users.php');
 
-// ログインの情報をセッションに保存する
+// フォームから入力した情報をセッションに保存する
 $_SESSION['login'] = $_POST;
 
 try {
