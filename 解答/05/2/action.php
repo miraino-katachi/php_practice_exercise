@@ -1,8 +1,13 @@
 <?php
 $num = $_POST['num'];
 
+// 切り上げ
 $ceil = ceil($num);
+
+// 切り捨て
 $floor = floor($num);
+
+// 四捨五入
 $round = round($num);
 ?>
 <!DOCTYPE html>
