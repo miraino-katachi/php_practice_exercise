@@ -74,12 +74,13 @@ $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         <td><?= $v['todo_item'] ?></td>
                                         <td>
                                             <form method="post" action="./action.php" class="form-inline">
-                                            <div class="form-check form-check-inline mb-3 mr-1">
-                                                    <input type="radio" value="0" id="is_camplete1" class="form-check-input">
+                                                <input type="hidden" name="id" value="<?= $v['id'] ?>">
+                                                <div class="form-check form-check-inline mb-3 mr-1">
+                                                <input type="radio" value="0" name="is_completed" id="camplete1" class="form-check-input">
                                                     <label for="is_complete1" class="form-check-label">未完了</label>
                                                 </div>
                                                 <div class="form-check form-check-inline mb-3 mr-1">
-                                                    <input type="radio" value="1" id="is_camplete12" class="form-check-input">
+                                                <input type="radio" value="1" name="is_completed" id="complete2" class="form-check-input">
                                                     <label for="is_complete2" class="form-check-label">完了</label>
                                                 </div>
                                                 <div class="form-check form-check-inline mb-3 mr-1">

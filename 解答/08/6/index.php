@@ -74,16 +74,17 @@ $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         <td><?= $v['todo_item'] ?></td>
                                         <td>
                                             <form method="post" action="./action.php" class="form-inline">
-                                            <div class="form-check form-check-inline mb-3 mr-1">
-                                                    <input type="radio" value="0" id="is_camplete1" class="form-check-input">
-                                                    <label for="is_complete1" class="form-check-label">未完了</label>
+                                                <input type="hidden" name="id" value="<?= $v['id'] ?>">
+                                                <div class="form-check form-check-inline mb-3 mr-1">
+                                                    <input type="radio" value="0" name="is_completed" id="camplete1" class="form-check-input" <?php if ($v['is_completed'] == 0) echo ' checked' ?>>
+                                                    <label for="complete1" class="form-check-label">未完了</label>
                                                 </div>
                                                 <div class="form-check form-check-inline mb-3 mr-1">
-                                                    <input type="radio" value="1" id="is_camplete12" class="form-check-input">
-                                                    <label for="is_complete2" class="form-check-label">完了</label>
+                                                    <input type="radio" value="1" name="is_completed" id="complete2" class="form-check-input" <?php if ($v['is_completed'] == 1) echo ' checked' ?>>
+                                                    <label for="complete2" class="form-check-label">完了</label>
                                                 </div>
                                                 <div class="form-check form-check-inline mb-3 mr-1">
-                                                    <input type="checkbox" value="1" id="delete" class="form-check-input">
+                                                    <input type="checkbox" value="1" name="delete" id="delete" class="form-check-input">
                                                     <label for="delete" class="form-check-label">削除</label>
                                                 </div>
                                                 <input type="submit" value="実行" class="btn btn-primary mb-3">
