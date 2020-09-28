@@ -84,7 +84,7 @@ $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                     <label for="is_complete2" class="form-check-label">完了</label>
                                                 </div>
                                                 <div class="form-check form-check-inline mb-3 mr-1">
-                                                    <input type="checkbox" value="1" id="delete" class="form-check-input">
+                                                    <input type="checkbox" value="1" name="delete" id="delete" class="form-check-input">
                                                     <label for="delete" class="form-check-label">削除</label>
                                                 </div>
                                                 <input type="submit" value="実行" class="btn btn-primary mb-3">
