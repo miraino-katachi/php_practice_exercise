@@ -37,6 +37,9 @@ try {
     header('Location: ./error.php');
     exit;
 }
+
+// ワンタイムトークン
+$token = SaftyUtil::generateToken();
 ?>
 <!DOCTYPE html>
 <html lang="jp">
@@ -81,7 +84,7 @@ try {
                             </div>
                         <?php endif ?>
                         <form action="./add.php" method="post" class="form-inline">
-                            <input type="hidden" name="token" value="<?= SaftyUtil::generateToken() ?>">
+                            <input type="hidden" name="token" value="<?= $token ?>">
                             <div class="form-group mb-3 mr-1">
                                 <label for="expiration_date" class="sr-only">期限日</label>
                                 <input type="date" name="expiration_date" value="<?= $date ?>" id="expiration_date" class="form-control">
