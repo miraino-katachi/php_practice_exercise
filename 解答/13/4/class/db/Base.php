@@ -9,7 +9,7 @@ class Base
     const DB_NAME = 'php_work';
 
     /** @var string データベースホスト名 */
-    const DB_HOST = 'localhost1';
+    const DB_HOST = 'localhost';
 
     /** @var string データベース接続ユーザー名 */
     const DB_USER = 'root';

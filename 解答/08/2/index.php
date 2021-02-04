@@ -41,20 +41,6 @@ $date = $dt->format('Y-m-d');
                             </div>
                             <input type="submit" value="追加" class="btn btn-primary mb-3">
                         </form>
-                        <?php if (count($list) > 0) : ?>
-                        <table class="table table-borderd">
-                            <tr>
-                                <th>期限日</th>
-                                <th>TODO項目</th>
-                            </tr>
-                            <?php foreach ($list as $v) : ?>
-                                <tr>
-                                    <td><?= $v['expiration_date'] ?></td>
-                                    <td><?= $v['todo_item'] ?></td>
-                                </tr>
-                            <?php endforeach ?>
-                        </table>
-                    <?php endif ?>
                     </div>
                 </div>
             </div>
