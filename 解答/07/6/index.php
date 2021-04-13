@@ -5,9 +5,8 @@ $month = 0;
 // GETパラメータがあって、かつ、数値形式で、かつ、整数のとき。
 // isset()は、変数が存在していて、そして NULLとは異なるときにtrueを返却します。
 // is_numeric()関数は、引数が「数値文字列」の場合にtrueを返却します。
-// is_int()関数は、引数が「数値文字列」の場合はfalseを返却しますので、integerにキャストしています。
 // HTMLのFORMからPOSTまたはGETで送信された値やgetパラメータ（クエリストリング、クエリパラメータ）で受け取った「数値」は「文字列」になっています。
-if (isset($_GET['month']) && is_numeric($_GET['month']) && is_int((int) $_GET['month'])) {
+if (isset($_GET['month']) && is_numeric($_GET['month'])) {
     $month = (int) $_GET['month'];
 }
 
