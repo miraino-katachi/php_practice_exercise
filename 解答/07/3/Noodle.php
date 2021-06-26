@@ -5,7 +5,7 @@
 class Noodle extends Menu
 {
     /** @var string 麺の硬さ */
-    protected $noodlsHardness;
+    protected $noodleHardness;
 
     /**
      * コンストラクタ
