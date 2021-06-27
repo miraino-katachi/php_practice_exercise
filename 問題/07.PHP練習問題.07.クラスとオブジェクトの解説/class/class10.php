@@ -42,7 +42,7 @@ class MusicPlayer extends AudioClass
     // 抽象クラスであるスーパークラスのメソッドを実装します。
 
     /**
-     * 食べ物の名前を返却します。
+     * 音楽を再生します。
      *
      * @return string
      */
@@ -52,7 +52,7 @@ class MusicPlayer extends AudioClass
     }
 
     /**
-     * 飲み物の名前を返却します。
+     * 音楽を止めます。
      *
      * @return void
      */
