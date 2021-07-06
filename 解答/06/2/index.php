@@ -37,28 +37,15 @@ if (!isset($_SESSION['count'])) {
                         <p>
                             <?= $_SESSION['count'] ?>
                         </p>
-                        <button id="count" class="btn btn-primary">カウント</button>
-                        <button id="reset" class="btn btn-outline-primary">リセット</button>
+                        <a href="./" class="btn btn-primary">カウント</a>
+                        <a href="./?reset" class="btn btn-outline-primary">リセット</a>
                     </div>
                 </div>
             </div>
             <div class="cols-md-4"></div>
         </div>
-
-
-
-
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script>
-        $('#count').click(function() {
-            location.href = './';
-        });
 
-        $('#reset').click(function() {
-            location.href = './?reset';
-        });
-    </script>
 </body>
 
 </html>
