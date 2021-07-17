@@ -3,12 +3,15 @@
 session_start();
 session_regenerate_id();
 
-// エラーが有ったとき
-$msg = '';
-$date = '';
 if (isset($_SESSION['error'])) {
+    // エラーが有ったとき
     $msg = $_SESSION['error']['msg'];
     $date = $_SESSION['error']['date'];
+} else {
+    // エラーがなかったとき、または、初回アクセス時
+    $msg = '';
+    $dt = new DateTime();
+    $date = $dt->format('Y/m/d');
 }
 ?>
 <!DOCTYPE html>
