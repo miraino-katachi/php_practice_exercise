@@ -1,9 +1,5 @@
 <?php
 
-// PHP練習問題. 07-1クラスI
-// 設問1.	クラスの作成（１）
-// (5)	Dog クラスに次の内容を追加・修正し、その内容を確認できるプログラムを作成しなさい。
-
 /**
  * Dogクラス
  */
@@ -19,6 +15,16 @@ class Dog
     private $type;
 
     /**
+     * コンストラクタ
+     *
+     * @param string $type 犬の種類
+     */
+    public function __construct($type)
+    {
+        $this->type = $type;
+    }
+
+    /**
      * 名前を設定します。
      *
      * @param string $name
@@ -32,22 +38,12 @@ class Dog
     /**
      * 年齢を設定します。
      *
+     * @param int $age
      * @return void
      */
     public function setAge($age)
     {
         $this->age = $age;
-    }
-
-    /**
-     * 犬の種類を設定します。
-     *
-     * @param String $type
-     * @return void
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
     }
 
     /**

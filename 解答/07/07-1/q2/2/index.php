@@ -1,9 +1,5 @@
 <?php
 
-// PHP練習問題. 07-1クラスI
-// 設問2.	クラスの作成（２）
-// (2)	CoinCase クラスを使用して次のプログラムを作成しなさい。
-
 require_once('./CoinCase.php');
 
 $coin = new CoinCase();

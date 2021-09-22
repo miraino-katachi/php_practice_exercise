@@ -1,15 +1,11 @@
 <?php
 
-// PHP練習問題. 07-1クラスI
-// 設問2.	クラスの作成（２）
-// (1)	以下のようなコインケースを表すクラスCoinCaseを作成しなさい。
-
 /**
  * コインケースクラス
  */
 class CoinCase
 {
-    /** @var array コインの種類 */
+    /** @var array コインの種類と枚数 */
     private $coin_type = [
         500 => 0,
         100 => 0,
@@ -28,10 +24,11 @@ class CoinCase
      */
     public function addCoins($type, $num)
     {
+        // 該当しない数が指定されたら無視する
         if (!isset($this->coin_type[$type])) {
             return;
         }
-        $this->coin_type[$type] = $num;
+        $this->coin_type[$type] += $num;
     }
 
     /**
@@ -42,6 +39,7 @@ class CoinCase
      */
     public function getCount($type)
     {
+        // 該当しない数が指定されたら0を返却する
         if (!isset($this->coin_type[$type])) {
             return 0;
         }

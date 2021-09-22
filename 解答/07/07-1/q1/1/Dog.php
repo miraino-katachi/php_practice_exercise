@@ -1,15 +1,11 @@
 <?php
 
-// PHP練習問題. 07-1クラスI
-// 設問1.	クラスの作成（１）
-// (1)	以下のプロパティ・メソッドを持つDog クラス(Dog.php）を作成しなさい。
-
 /**
  * Dogクラス
  */
 class Dog
 {
-    /** @var string name 犬の名前 */
+    /** @var string $name 犬の名前 */
     private $name;
 
     /**
