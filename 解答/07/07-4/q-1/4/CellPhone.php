@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * 携帯電話クラス
+ */
 class CellPhone implements IPhone, IMailer, IComputer
 {
     /**

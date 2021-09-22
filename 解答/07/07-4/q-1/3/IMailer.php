@@ -5,7 +5,6 @@
  */
 interface IMailer
 {
-
     /**
      * メールを送信します。
      *

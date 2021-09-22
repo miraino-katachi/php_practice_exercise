@@ -5,7 +5,6 @@
  */
 class Mailer implements IMailer
 {
-
     /**
      * メールを送信します。
      *

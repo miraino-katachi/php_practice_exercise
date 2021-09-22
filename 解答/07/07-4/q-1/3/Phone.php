@@ -5,7 +5,6 @@
  */
 class Phone implements IPhone
 {
-
     /**
      * 電話をかけます。
      *

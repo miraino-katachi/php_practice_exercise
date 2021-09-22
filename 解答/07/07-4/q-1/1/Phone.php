@@ -3,8 +3,8 @@
 /**
  * Phoneクラス
  */
-class Phone{
-
+class Phone
+{
     /**
      * 電話をかけます。
      *

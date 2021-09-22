@@ -5,7 +5,6 @@
  */
 interface IPhone
 {
-
     /**
      * 電話をかけます。
      *
