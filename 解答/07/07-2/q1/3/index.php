@@ -14,7 +14,7 @@ $dog = new Dog('ぽち', 5);
 $cat = new Cat('たま', 3);
 
 $dog->showProfile();
-$cat->showProfile();
-
 $dog->run();
+
+$cat->showProfile();
 $cat->sleep();

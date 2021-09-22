@@ -1,9 +1,5 @@
 <?php
 
-// PHP練習問題. 07-2クラスII
-// 設問1.	クラスの継承
-// (1)	以下のプロパティ・メソッドを持つDog クラスを作成しなさい。
-
 /**
  * Dogクラス
  */
@@ -34,7 +30,7 @@ class Dog
      */
     public function showProfile()
     {
-        echo '<p>名前は'.$this->name.'です。年齢は'.$this->age.'歳です。';
+        echo '<p>名前は' . $this->name . 'です。年齢は' . $this->age . '歳です。';
     }
 
     /**

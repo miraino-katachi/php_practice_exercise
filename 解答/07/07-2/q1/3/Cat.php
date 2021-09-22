@@ -1,9 +1,5 @@
 <?php
 
-// PHP練習問題. 07-2クラスII
-// 設問1.	クラスの継承
-// (2)	以下のプロパティ・メソッドを持つCat クラスを作成しなさい。
-
 /**
  * Catクラス
  */
@@ -34,7 +30,7 @@ class Cat
      */
     public function showProfile()
     {
-        echo '<p>名前は'.$this->name.'です。年齢は'.$this->age.'歳です。';
+        echo '<p>名前は' . $this->name . 'です。年齢は' . $this->age . '歳です。';
     }
 
     /**
