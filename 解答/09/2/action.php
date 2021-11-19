@@ -32,7 +32,7 @@ function isDate($str)
     $d = explode('/', $str);
     // 数値かどうかのチェック
     for ($i = 0; $i < count($d); $i++) {
-        if (!is_numeric($d[$i])) {
+        if (!is_numeric($d[$i]) || $i >= 3) {
             return false;
         }
     }
