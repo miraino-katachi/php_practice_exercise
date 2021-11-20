@@ -30,12 +30,18 @@ try {
 function isDate($str)
 {
     $d = explode('/', $str);
+    // 要素数が3かどうかのチェック
+    if (count($d) !== 3) {
+        return false;
+    }
+
     // 数値かどうかのチェック
     for ($i = 0; $i < count($d); $i++) {
         if (!is_numeric($d[$i]) || $i >= 3) {
             return false;
         }
     }
+
     return checkdate($d[1], $d[2], $d[0]);
 }
 ?>
