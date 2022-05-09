@@ -22,6 +22,9 @@ if (!SaftyUtil::isValidToken($_POST['token'])) {
     header('Location: ./');
 }
 
+// サニタイズを行う
+$post = SaftyUtil::sanitize($_POST);
+
 // エラーメッセージをクリア
 unset($_SESSION['msg']['err']);
 
@@ -30,7 +33,7 @@ try {
     $db = new TodoItems();
 
     // インサート実行
-    $db->insert($_POST['expiration_date'], $_POST['todo_item']);
+    $db->insert($post['expiration_date'], $post['todo_item']);
 
     // 処理が完了したらトップページ（index.php）へリダイレクト
     header('Location: ./');

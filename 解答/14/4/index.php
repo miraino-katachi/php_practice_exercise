@@ -107,7 +107,7 @@ $token = SaftyUtil::generateToken();
                                         <td class="<?php if ($v['is_completed'] == 1) echo 'complete' ?>"><?= $v['todo_item'] ?></td>
                                         <td>
                                             <form method="post" action="./action.php" class="form-inline">
-                                                <input type="hidden" name="token" value="<?= SaftyUtil::generateToken() ?>">
+                                                <input type="hidden" name="token" value="<?= $token ?>">
                                                 <input type="hidden" name="id" value="<?= $v['id'] ?>">
                                                 <div class="form-check form-check-inline mb-3 mr-1">
                                                     <input type="radio" value="0" name="is_completed" id="camplete1" class="form-check-input" <?php if ($v['is_completed'] == 0) echo ' checked' ?>>

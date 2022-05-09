@@ -17,7 +17,10 @@ if (!SaftyUtil::isValidToken($_POST['token'])) {
     exit;
 }
 
-// ログインの情報をセッションに保存する
+// サニタイズを行う
+$post = SaftyUtil::sanitize($_POST);
+
+// フォームから送信された情報をセッションに保存する
 $_SESSION['login'] = $_POST;
 
 try {
@@ -25,7 +28,7 @@ try {
     $db = new Users();
 
     // レコードのインサート
-    $ret = $db->addUser($_POST['email'], $_POST['password'], $_POST['name']);
+    $ret = $db->addUser($post['email'], $post['password'], $post['name']);
     if (!$ret) {
         // エラーメッセージをセッションに保存して、リダイレクトする
         $_SESSION['msg']['err']  = Config::MSG_USER_DUPLICATE;

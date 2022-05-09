@@ -50,9 +50,15 @@ try {
 
     // 開いたCSVファイルを1行ずつ読み込む
     while (($buf = fgetcsv($fp)) !== false) {
-        // アップデート実行
         // $bufにはCSVから読み込んだ項目が配列として代入されている
-        $db->update($buf[0], $buf[1], mb_convert_encoding($buf[2], 'UTF-8', 'SJIS-win'), $buf[3]);
+        // サニタイズを行う前に文字コード変換を行っておく（htmlspecialchars()がSJIS-winでは誤動作を起こすため）
+        $buf[2] = mb_convert_encoding($buf[2], 'UTF-8', 'SJIS-win');
+
+        // サニタイズを行う
+        $buf = SaftyUtil::sanitize($buf);
+
+        // アップデート実行
+        $db->update($buf[0], $buf[1], $buf[2], $buf[3]);
     }
 
     // トランザクションをコミット

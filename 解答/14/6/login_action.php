@@ -17,6 +17,9 @@ if (!SaftyUtil::isValidToken($_POST['token'])) {
     exit;
 }
 
+// サニタイズを行う
+$post = SaftyUtil::sanitize($_POST);
+
 // ログイン３回失敗でログインできないようにする
 if (isset($_SESSION['login_failure']) && $_SESSION['login_failure'] >= 3) {
     $_SESSION['msg']['err']  = Config::MSG_USER_LOGIN_TRY_TIMES_OVER;
@@ -24,15 +27,15 @@ if (isset($_SESSION['login_failure']) && $_SESSION['login_failure'] >= 3) {
     exit;
 }
 
-// ログインの情報をセッションに保存する
+// フォームから送信された情報をセッションに保存する
 $_SESSION['login'] = $_POST;
 
 try {
     // ユーザーテーブルクラスのインスタンスを生成する
     $db = new Users();
 
-    // ログイン情報からユーザーを検索
-    $user = $db->getUser($_POST['email'], $_POST['password']);
+    // フォームから送信された情報からユーザーを検索
+    $user = $db->getUser($post['email'], $post['password']);
 
     // ログイン不可のとき
     if (empty($user)) {

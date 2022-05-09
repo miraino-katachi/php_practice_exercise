@@ -17,15 +17,18 @@ if (!SaftyUtil::isValidToken($_POST['token'])) {
     exit;
 }
 
-// ログインの情報をセッションに保存する
+// サニタイズを行う
+$post = SaftyUtil::sanitize($_POST);
+
+// フォームから送信された情報をセッションに保存する
 $_SESSION['login'] = $_POST;
 
 try {
     // ユーザーテーブルクラスのインスタンスを生成する
     $db = new Users();
 
-    // ログイン情報からユーザーを検索
-    $user = $db->getUser($_POST['email'], $_POST['password']);
+    // フォームから送信された情報からユーザーを検索
+    $user = $db->getUser($post['email'], $post['password']);
 
     // ログイン不可のとき
     if (empty($user)) {

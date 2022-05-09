@@ -23,6 +23,9 @@ if (!SaftyUtil::isValidToken($_POST['token'])) {
     exit;
 }
 
+// サニタイズを行う
+$post = SaftyUtil::sanitize($_POST);
+
 // エラーメッセージをクリア
 unset($_SESSION['msg']['err']);
 
@@ -31,12 +34,12 @@ try {
     $db = new TodoItems();
 
     // 削除チェックボックスにチェックが入っているとき
-    if (isset($_POST['delete']) && $_POST['delete'] == "1") {
+    if (isset($post['delete']) && $post['delete'] == "1") {
         // レコードを削除する
-        $db->delete($_POST['id']);
+        $db->delete($post['id']);
     } else {
         // レコードをアップデートする
-        $db->updateIsCompletedByID($_POST['id'], $_POST['is_completed']);
+        $db->updateIsCompletedByID($post['id'], $post['is_completed']);
     }
 
     // index.phpへリダイレクトする
