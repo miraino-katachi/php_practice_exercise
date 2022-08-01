@@ -21,13 +21,12 @@ if (isset($_SESSION['error'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>練習問題09-2</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="row my-3">
-            <div class="col-md-4"></div>
+        <div class="row my-3 justify-content-center">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
@@ -37,8 +36,8 @@ if (isset($_SESSION['error'])) {
                         </div>
                         <?php endif ?>
                         <form action="./action.php" method="post">
-                            <div class="form-group">
-                                <label for="date">日付を入力してください</label>
+                            <div class="mb-3">
+                                <label for="date" class="form-label">日付を入力してください</label>
                                 <input type="text" name="date" value="<?=$date ?>" id="date" class="form-control">
                             </div>
                             <input type="submit" value="送信" class="btn btn-primary">
@@ -46,7 +45,6 @@ if (isset($_SESSION['error'])) {
                     </div>
                 </div>
             </div>
-            <div class="col-md-4"></div>
         </div>
     </div>
 </body>

@@ -15,19 +15,18 @@ if (!isset($_SESSION['count'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>練習問題06-2</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-4"></div>
+        <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="card my-3">
                     <div class="card-header">
@@ -42,7 +41,6 @@ if (!isset($_SESSION['count'])) {
                     </div>
                 </div>
             </div>
-            <div class="cols-md-4"></div>
         </div>
     </div>
 

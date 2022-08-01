@@ -14,13 +14,12 @@ require_once('./class/util/SaftyUtil.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>練習問題14-4</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="row my-3">
-            <div class="col-3"></div>
+        <div class="row my-3 justify-content-center">
             <div class="col-6">
                 <div class="card">
                     <div class="card-header">ログイン</div>
@@ -32,12 +31,12 @@ require_once('./class/util/SaftyUtil.php');
                         <?php endif ?>
                         <form action="./login_action.php" method="post">
                         <input type="hidden" name="token" value="<?= SaftyUtil::generateToken() ?>">
-                        <div class="form-group">
-                                <label for="email">Email address</label>
+                        <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
                                 <input type="text" name="email" value="<?php if (isset($_SESSION['login']['email'])) echo $_SESSION['login']['email'] ?>" class="form-control" id="emal">
                             </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
                                 <input type="password" name="password" class="form-control" id="password">
                             </div>
                             <div class="form-group">
@@ -47,7 +46,6 @@ require_once('./class/util/SaftyUtil.php');
                     </div>
                 </div>
             </div>
-            <div class="col-3"></div>
         </div>
     </div>
 </body>

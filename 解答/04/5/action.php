@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -10,9 +10,8 @@
 
 <body>
     <div class="container">
-        <div class="row my-5">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
+        <div class="row my-5 justify-content-center">
+            <div class="col-md-5">
                 <div class="card">
                     <div class="card-header">
                         お選びになったメニューはこちらです
@@ -26,7 +25,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4"></div>
         </div>
     </div>
 </body>

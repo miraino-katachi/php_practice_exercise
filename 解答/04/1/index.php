@@ -2,19 +2,18 @@
 $fruits = ['みかん', 'りんご', 'メロン', 'バナナ', 'パイナップル'];
 ?>
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>練習問題04-1</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="row my-5">
-            <div class="col-md-4"></div>
+        <div class="row my-5 justify-content-center">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">
@@ -40,7 +39,6 @@ $fruits = ['みかん', 'りんご', 'メロン', 'バナナ', 'パイナップ�
                     </div>
                 </div>
             </div>
-            <div class="col-md-4"></div>
         </div>
     </div>
 </body>
