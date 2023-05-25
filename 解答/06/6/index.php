@@ -1,6 +1,6 @@
 <?php
 // 「商品のリスト」の連想配列を作成する。
-$poducts = [
+$products = [
     0 => [
         'product_name' => 'みかん',
         'price' => '300',
@@ -40,7 +40,7 @@ $poducts = [
                             </thead>
                             <tbody>
                                 <!-- 連想配列から要素を1件ずつ抜き出す -->
-                                <?php foreach ($poducts as $v) : ?>
+                                <?php foreach ($products as $v) : ?>
                                     <form method="post" action="./cart_add.php">
                                         <tr>
                                             <td>
