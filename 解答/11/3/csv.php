@@ -1,9 +1,5 @@
 <?php
 try {
-    // 日本標準時の現在日付を取得
-    $dt = new DateTime('now', new DateTimeZone('Asia/Tokyo'));
-    $date = $dt->format('Y-m-d');
-
     // データベースに接続するための文字列（DSN 接続文字列）
     $dsn = 'mysql:dbname=php_work;host=localhost;charset=utf8';
 
