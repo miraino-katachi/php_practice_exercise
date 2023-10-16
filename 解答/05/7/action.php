@@ -19,7 +19,7 @@ function isLengthWithinLimit($str, $limit) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>練習問題05-6</title>
+    <title>練習問題05-7</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
 </head>
 
@@ -35,7 +35,7 @@ function isLengthWithinLimit($str, $limit) {
                         <?php if (isLengthWithinLimit($_POST['str'], 50)) : ?>
                             入力された文字列は50文字以内です。
                         <?php else : ?>
-                            入力された文字列は50文字以上あります。
+                            入力された文字列は51文字以上あります。
                         <?php endif ?>
                     </div>
                 </div>
