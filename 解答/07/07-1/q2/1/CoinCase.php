@@ -49,7 +49,7 @@ class CoinCase
     /**
      * 硬貨の総額を返却します。
      *
-     * @return void
+     * @return int
      */
     public function getAmount()
     {
