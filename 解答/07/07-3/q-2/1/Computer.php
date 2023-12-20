@@ -6,7 +6,7 @@
 abstract class Computer
 {
     /** @var string $type コンピュータの種類 */
-    public $type;
+    protected $type;
 
     /**
      * コンストラクタ

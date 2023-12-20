@@ -3,7 +3,7 @@
 abstract class Airplane
 {
     /** @var string 飛行機のタイプ */
-    protected $type;
+    private $type;
 
     /**
      * コンストラクタ
