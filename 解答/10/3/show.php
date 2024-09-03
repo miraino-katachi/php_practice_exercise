@@ -15,7 +15,7 @@ $path = __DIR__ . '/images/';
 // ディレクトリ内のファイルを配列で取得
 $tmp = scandir($path);
 
-// 「.」から始まるアイルを削除して、通常ファイルのみを取得する
+// 「.」から始まるファイルを削除して、通常ファイルのみを取得する
 $files = [];
 foreach ($tmp as $v) {
     if (!preg_match('/^\./', $v) && is_file('./images/' . $v)) {
