@@ -1,5 +1,5 @@
 <?php
-$poroducts = [
+$products = [
     0 => [
         'product_name' => 'みかん',
         'production_area' => '愛媛県',
@@ -43,9 +43,9 @@ $poroducts = [
                                 <th>品質</th>
                                 <th>価格（円）</th>
                             </tr>
-                            <?php foreach ($poroducts as $poroduct) : ?>
+                            <?php foreach ($products as $product) : ?>
                                 <tr>
-                                    <?php foreach ($poroduct as $v) : ?>
+                                    <?php foreach ($product as $v) : ?>
                                         <td><?= $v ?></td>
                                     <?php endforeach ?>
                                 </tr>

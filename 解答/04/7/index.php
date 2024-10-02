@@ -1,5 +1,5 @@
 <?php
-$poroduct = [
+$product = [
     'product_name' => 'みかん',
     'production_area' => '愛媛県',
     'quality' => '優',
@@ -23,7 +23,7 @@ $poroduct = [
                 <div class="card">
                     <div class="card-body">
                         <table class="table table-bordered">
-                            <?php foreach ($poroduct as $k => $v) : ?>
+                            <?php foreach ($product as $k => $v) : ?>
                                 <tr>
                                     <th><?= $k ?></th>
                                     <td><?= $v ?></td>

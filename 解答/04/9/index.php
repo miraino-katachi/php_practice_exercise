@@ -1,5 +1,5 @@
 <?php
-$poroducts = [
+$products = [
     0 => [
         'product_name' => 'みかん',
         'production_area' => '愛媛県',
@@ -50,17 +50,17 @@ $poroducts = [
                             </tr>
                             <?php
                             $sum = 0;
-                            foreach ($poroducts as $poroduct) : ?>
+                            foreach ($products as $product) : ?>
                                 <tr>
-                                    <td><?= $poroduct['product_name'] ?></td>
-                                    <td><?= $poroduct['production_area'] ?></td>
-                                    <td><?= $poroduct['quality'] ?></td>
-                                    <td><?= $poroduct['price'] ?></td>
-                                    <td><?= $poroduct['num'] ?></td>
-                                    <td><?= $poroduct['price'] * $poroduct['num'] ?></td>
+                                    <td><?= $product['product_name'] ?></td>
+                                    <td><?= $product['production_area'] ?></td>
+                                    <td><?= $product['quality'] ?></td>
+                                    <td><?= $product['price'] ?></td>
+                                    <td><?= $product['num'] ?></td>
+                                    <td><?= $product['price'] * $product['num'] ?></td>
                                 </tr>
                             <?php
-                                $sum += $poroduct['price'] * $poroduct['num'];
+                                $sum += $product['price'] * $product['num'];
                             endforeach ?>
                             <!--
                             foreach () {
